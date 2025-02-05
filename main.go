@@ -13,7 +13,7 @@ import (
 
 func main() {
 	// Открываем диалог выбора исходного файла
-	inputFilePath, err := dialog.File().Title("Выберите исходный CSV файл").Load()
+	inputFilePath, err := dialog.File().Filter("CSV файл", "csv").Title("Выберите исходный CSV файл").Load()
 	if err != nil {
 		log.Fatalf("Ошибка выбора файла: %v", err)
 	}
